@@ -1,0 +1,113 @@
+/**
+ * Site header
+ */
+.site-header {
+    background-color: $grey-dark;
+    position: relative;
+    padding: $spacing-unit;
+
+    .site-logo {
+        width: 180px;
+        display: block;
+    }
+}
+
+/**
+ * Site footer
+ */
+
+ .site-footer {
+
+    border-bottom: solid 5px $red-light;
+
+    .footer-top {
+        background-color: $grey-light;
+    }
+
+    .footer-bottom {
+        background-color: $grey;
+        border-bottom: solid $spacing-unit $grey-dark;
+        padding: $spacing-unit;
+
+        nav {
+            float: left;
+            a {
+                display: inline-block;
+                color: $grey-light;
+                padding: 5px;
+                margin-right: $spacing-unit/2;
+                font-size: $small-font-size;
+
+                &:hover {
+                    color: #fff;
+                }
+
+            }
+        }
+
+        .social-links {
+            float: right;
+
+            a {
+                display: inline-block;
+                height:25px;
+                width: 30px;
+            }
+
+        }
+    }
+
+ }
+
+
+ /* home page styles */
+
+.tiles {
+
+    height: 600px;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    background: $grey;
+
+}
+.tiles__tile {
+    flex: 1 300px;
+    display:flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+
+    background: linear-gradient(rgba(black, 0.5),rgba(black, 0.5)),url('http://unsplash.it/400/300/?random') no-repeat 50% 50%;
+    background-size: cover;
+
+    h2 {
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 800;
+        font-size: 32px;
+        text-shadow: 0 0 5px rgba(black,0.8);
+    }
+    p {
+        max-width: 35em;
+        text-shadow: 0 0 5px rgba(black,0.8);
+    }
+
+}
+
+.tiles__tile--hero {
+    flex: 1 100%;
+    flex-direction: column;
+    background: $red-light url('http://unsplash.it/600/300/?random') no-repeat 50% 50%;
+    background-size: cover;
+    background-blend-mode: multiply;
+
+    h2 {
+        font-size: 40px;
+        line-height: 1.1;
+    }
+
+}
