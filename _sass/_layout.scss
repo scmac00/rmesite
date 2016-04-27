@@ -64,7 +64,7 @@
 
 .tiles {
 
-    height: 600px;
+    height: 700px;
 
     display: flex;
 
@@ -111,3 +111,59 @@
     }
 
 }
+
+.eq-finder {
+    background-color: $grey-dark;
+    text-align: center;
+    padding: $spacing-unit;
+
+    h3 {
+        text-transform: uppercase;
+        color: #fff;
+        font-weight: bold;
+        letter-spacing: 1px;
+        line-height: 1.1;
+    }
+}
+
+.eq-finder__inputs {
+    display: flex;
+    align-items: center;
+
+    select,input {
+        flex: 1;
+        margin: 0 $spacing-unit/2;
+        box-sizing: border-box;
+        height: 30px;
+        padding: 3px;
+        font-size: 14px;
+        line-height: 30px;
+    }
+    select {
+        -webkit-appearance: menulist-button;
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+
+    .button {
+        flex: 0 1;
+    }
+
+    @media (max-width: 650px) {
+        flex-wrap: wrap;
+
+        select, input, .button {
+            flex: 1 100%;
+            margin: 0 0 $spacing-unit/2 0;
+        }
+
+    }
+}
+
+
+
+
+
+
