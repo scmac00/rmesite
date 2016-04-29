@@ -2,13 +2,37 @@
  * Site header
  */
 .site-header {
+
     background-color: $grey-dark;
     position: relative;
-    padding: $spacing-unit;
+    padding: $spacing-unit 0;
+
+    > .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
     .site-logo {
         width: 180px;
-        display: block;
+        height: 65px;
+        display: inline-block;
+    }
+
+    .menu {
+        
+        a {
+            display: inline-block;
+            color: $grey-light;
+            padding: 5px;
+            margin-right: $spacing-unit/2;
+            font-size: $small-font-size;
+
+            &:hover {
+                color: #fff;
+            }
+
+        }
     }
 }
 
@@ -28,9 +52,16 @@
         background-color: $grey;
         border-bottom: solid $spacing-unit $grey-dark;
         padding: $spacing-unit;
+        
+        >.wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;    
+        }
+        
 
         nav {
-            float: left;
+            
             a {
                 display: inline-block;
                 color: $grey-light;
@@ -46,7 +77,6 @@
         }
 
         .social-links {
-            float: right;
 
             a {
                 display: inline-block;
@@ -80,9 +110,34 @@
     align-items: center;
     justify-content: center;
     color: #fff;
+    position: relative;
 
-    background: linear-gradient(rgba(black, 0.5),rgba(black, 0.5)),url('http://unsplash.it/400/300/?random') no-repeat 50% 50%;
+    background: url('http://unsplash.it/400/300/?random') no-repeat 50% 50%;
     background-size: cover;
+
+    > a.tile-link {
+        position: absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+
+        background-color: rgba(0,0,0,0.4);
+
+        text-decoration: none;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        transition: all 0.2s;
+
+        &:hover {
+            background-color: rgba(0,0,0, 0.7);
+        }
+
+
+    }
 
     h2 {
         color: #fff;
@@ -101,15 +156,22 @@
 .tiles__tile--hero {
     flex: 1 100%;
     flex-direction: column;
-    background: $red-light url('http://unsplash.it/600/300/?random') no-repeat 50% 50%;
+    background: $red-light url('../images/home-hero.jpg') no-repeat 50% 100%;
     background-size: cover;
-    background-blend-mode: multiply;
 
     h2 {
         font-size: 40px;
         line-height: 1.1;
     }
 
+}
+
+.tiles__tile--ag {
+    background-image: url('../images/tile-ag.jpg');
+}
+
+.tiles__tile--const {
+    background-image: url('../images/tile-const.jpg');
 }
 
 .eq-finder {
@@ -162,7 +224,64 @@
     }
 }
 
+.widget-area {
+    padding: $spacing-unit*2 0;
+}
 
+.widgets {
+    display: flex;
+    flex-wrap: wrap;
+
+    
+}
+
+.widget {
+    flex: 1 240px;
+    background-color: $grey-light;
+    padding: $spacing-unit/2;
+    margin: $spacing-unit/4;
+
+    h3 {
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 16px;
+        color: $black;
+    }
+}
+
+.widget--logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: auto;
+
+    img {
+        max-width: 240px;
+    }
+
+    >a {
+        position: absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+
+        background-color: rgba(0,0,0,0.4);
+
+        text-decoration: none;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        transition: all 0.2s;
+
+        &:hover {
+            background-color: rgba(0,0,0, 0.7);
+        }
+    }
+}
 
 
 

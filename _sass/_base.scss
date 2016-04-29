@@ -82,7 +82,7 @@ li {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-    font-weight: $base-font-weight;
+    font-weight: 700;
 }
 
 
@@ -93,6 +93,8 @@ h1, h2, h3, h4, h5, h6 {
 a {
     color: $red-light;
     text-decoration: none;
+
+    transition: $global-transition;
 
     &:visited {
         color: darken($red-light, 15%);
@@ -130,7 +132,8 @@ a {
 
     &:hover { 
         background-color: #fff;
-        color: darken($grey-dark,10%);
+        color: $black;
+        box-shadow: 0 1px 4px 2px rgba(0,0,0,0.6);
     }
 }
 
@@ -191,7 +194,6 @@ pre {
     margin-left: auto;
     padding-right: $spacing-unit;
     padding-left: $spacing-unit;
-    @extend %clearfix;
 
     @include media-query($on-laptop) {
         max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
@@ -200,8 +202,6 @@ pre {
         padding-left: $spacing-unit / 2;
     }
 }
-
-
 
 /**
  * Clearfix

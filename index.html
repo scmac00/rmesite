@@ -5,7 +5,8 @@ layout: default
 <div class="home">
 
 	
-	<div class="tiles">
+	<section class="tiles">
+		
 		<div class="tiles__tile tiles__tile--hero">
 			
 			<h2>Rocky Mountain<br>Equipment Difference</h2>
@@ -13,14 +14,26 @@ layout: default
 			<a class="button button--white">Learn more</a>
 
 		</div>
-		<div class="tiles__tile"><a href="#" class=""><h2>Ready to<br>grow?</h2></a></div>
-		<div class="tiles__tile"><a href="#" class=""><h2>Ready to<br>build?</h2></a></div>
-		<div class="tiles__tile"><a href="#" class=""><h2>RME<br>geomatics</h2></a></div>
-	</div>
+		
+		<div class="tiles__tile tiles__tile--ag">
+			<a href="#" class="tile-link"><h2>Ready to<br>grow?</h2></a>
+		</div>
+		
+		<div class="tiles__tile tiles__tile--const">
+			<a href="#" class="tile-link"><h2>Ready to<br>build?</h2></a>
+		</div>
+		
+		<div class="tiles__tile tiles__tile--geo">
+			<a href="#" class="tile-link"><h2>RME<br>geomatics</h2></a>
+		</div>
+
+	</section>
 
 	
 		
-	{% include eq-finder.html %}
+	<!-- {% include eq-finder.html %} -->
+
+	{% include widgets.html %}
 
 	
 
