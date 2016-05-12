@@ -145,6 +145,16 @@ a {
     }
 }
 
+.button--text {
+    color: $red-light;
+    background-color: transparent;
+
+    &:hover {
+        color: $red-dark;
+        background-color: transparent;
+    }
+}
+
 
 /**
  * Blockquotes

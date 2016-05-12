@@ -552,6 +552,7 @@
     display: flex;
     flex-wrap: wrap;
     margin-bottom: $spacing-unit;
+    align-items: center;
 
     label {
         flex: 1 100%;
@@ -623,5 +624,93 @@ a.tools__links {
         background-color: darken($grey-light, 10%);
     }
 }
+
+
+
+/* Equipment Finder */
+
+.eq-finder--large {
+
+    background-color: $grey;
+    padding: $spacing-unit;
+
+    @media (max-width: 600px) {
+        padding: $spacing-unit/2 0;
+    }
+
+    >.wrapper {
+
+        display: flex;
+        flex-wrap: wrap;
+
+
+        .info-area {
+            flex: 1 200px;
+            text-align: center;
+            padding: $spacing-unit/2;
+            background-color: $grey-light-d;
+
+
+
+            .deal-zone-promo {
+                position: relative;
+                margin: $spacing-unit 0;
+                padding: $spacing-unit 0;
+
+                &:before, &:after {
+                    content: '';
+                    position: absolute;
+                    height: 1px;
+                    width: 90px;
+                    background-color: $grey;
+                    left: 50%;
+                    margin-left: -45px;
+                }
+                &:before {
+                    top:0;
+                }
+                &:after {
+                    bottom: 0;
+                }
+
+                img {
+                    max-width: 70%;
+                }
+            }
+        }
+
+        .search-area {
+            flex: 5 500px;
+            background-color: $grey-light;
+            padding: $spacing-unit/4;
+
+            .flex-c {
+                flex-wrap: wrap;
+
+                .col-1,.col-2,.col-3 {
+                    padding: 0 $spacing-unit/2;
+                }
+
+                .col-1,.col-2 {
+                    flex:1 250px;
+                }
+                .col-3 {
+                    flex: 1 100%;
+                    
+                }
+
+                .col-1 {
+                    padding-right: $spacing-unit;
+                    border-right: solid 1px $grey-light-d;
+                }
+                .col-2 {
+                    padding-left: $spacing-unit;
+                }
+            }
+        }
+    }
+}
+
+
 
 
