@@ -110,7 +110,7 @@ a {
 .button {
     display: inline-block;
     padding: $spacing-unit/4 $spacing-unit/2;
-    line-height: 1.4;
+    line-height: 1.5;
     border-radius: $g-radius;
     text-transform: uppercase;
     font-size: .8rem;
@@ -153,6 +153,16 @@ a {
     &:hover {
         color: $red-dark;
         background-color: rgba(0,0,0,0.05);
+    }
+
+    &.button--orange {
+        color: $orange;
+        background-color: transparent;
+
+        &:hover {
+            color: $orange-dark;
+            background-color: rgba(0,0,0,0.05);
+        }
     }
 }
 
@@ -201,6 +211,18 @@ pre {
     }
 }
 
+
+/* flexbox utilities */
+
+.flex-c { 
+    display: flex; //general flex container
+}
+
+// .flex-divider {
+//     background: $grey-light-d;
+//     min-width: 1px;
+//     margin: $spacing-unit/2;
+// }
 
 
 /**

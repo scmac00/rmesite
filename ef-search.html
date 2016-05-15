@@ -1,0 +1,71 @@
+---
+layout: eq-finder
+---
+
+<div class="ef type-ag">
+
+	<div class="search-tools ">
+		<div class="wrapper">
+			<div class="top">
+				<div class="sort">
+					<label>Sort by</label>
+					<select>
+						<option value="">Price Low to High</option>
+						<option value="">Price High to Low</option>
+						<option value="">Year</option>
+						<option value="">Hours</option>
+						<option value="">Nearest to You</option>
+						
+					</select>
+				</div>
+				<div class="view">
+					<label>View</label>
+					<a class="filter-button active"><i class="fa fa-th"></i></a>
+					<a class="filter-button"><i class="fa fa-th-list"></i></a>
+				</div>
+				<div class="rpp">
+					<label>Results per page</label>
+					<select>
+						<option value="">12</option>
+						<option value="">18</option>
+						<option value="">24</option>
+						<option value="">View All</option>
+					</select>
+				</div>
+			</div>
+			<div class="bottom"></div>
+
+		</div>
+
+	</div>
+
+	<section class="search-results">
+		
+		<div class="wrapper">
+
+			<h1>Results for: 4WD Tractor</h1>
+
+			<div class="products">
+				{% include product-cards.html %}
+				{% include product-cards.html %}
+				{% include product-cards.html %}
+				{% include product-cards.html %}
+
+				{% include product-cards.html %}
+				{% include product-cards.html %}
+				{% include product-cards.html %}
+				{% include product-cards.html %}
+
+				{% include product-cards.html %}
+				{% include product-cards.html %}
+				{% include product-cards.html %}
+				{% include product-cards.html %}
+			</div>
+
+		</div>
+
+
+
+	</section>
+
+</div>

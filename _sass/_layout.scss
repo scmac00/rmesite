@@ -631,7 +631,8 @@ a.tools__links {
 
 .eq-finder--large {
 
-    background-color: $grey;
+    background: #f0f0f0;
+    
     padding: $spacing-unit;
 
     @media (max-width: 600px) {
@@ -650,7 +651,15 @@ a.tools__links {
             padding: $spacing-unit/2;
             background-color: $grey-light-d;
             box-sizing: border-box;
-            border: solid 3px $grey-light;
+            // border: solid 3px $grey-light;
+            position: relative;
+            outline: solid 3px $grey-light-d;
+
+            &:after {
+                content:'';
+                display: block;
+                position: absolute;
+            }
 
 
 
@@ -686,6 +695,7 @@ a.tools__links {
             flex: 5 500px;
             background-color: $grey-light;
             padding: $spacing-unit/4;
+            outline: solid 3px $grey-light-d;
 
             .flex-c {
                 flex-wrap: wrap;
@@ -713,6 +723,149 @@ a.tools__links {
         }
     }
 }
+
+section.feat-eq {
+    margin: $spacing-unit*2 0;
+
+    .title-bar {
+
+        display: flex;
+        justify-content: space-between;
+        background: $grey-light;
+        align-items: center;
+        margin:  $spacing-unit 0 $spacing-unit/4;
+
+        h3 {
+            background: $grey-dark;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin:0;
+            font-size: $small-font-size;
+            line-height: 1;
+            padding: $spacing-unit/2;
+        }
+        .button {
+            margin-right: $spacing-unit/4;
+
+            .fa {
+                font-size: $base-font-size;
+            }
+        }
+    }
+
+    .feat-eq-ag {
+        .title-bar {
+            h3 {
+                background-color: $red-light;
+            }
+        }
+
+        .products .product-card {
+            border-bottom-color: $red-light;
+        }
+    }
+    .feat-eq-ce {
+        .title-bar {
+            h3 {
+                background-color: $orange-dark;
+            }
+        }
+
+        .products .product-card {
+            border-bottom-color: $orange;
+        }
+    }
+
+    .products {
+        display: flex;
+        flex-wrap: wrap;
+
+        .product-card {
+            flex: 1 220px;
+            margin: $spacing-unit/4;
+
+            .item-price, .item-details, .item-footer {
+                display: none;
+            }
+
+        }
+    }
+}
+
+// General product list styling
+.product-card {
+
+    background: $grey-light;
+    border-bottom: solid 3px $grey-light-d;
+
+    .item-image {
+        background-color: $grey-light-d;
+        min-height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .item-body {
+        padding: $spacing-unit/2;
+    }
+
+    h3,h4 {
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin:0;
+    }
+
+    h3 {
+        color: $black;
+        font-size: $base-font-size;
+    }
+
+    h4 {
+        color: $grey;
+        font-size: $small-font-size;
+        font-weight: normal;
+    }
+
+    .item-price {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: $black;
+        margin: $spacing-unit/4 0;
+    }
+
+    ul.item-details {
+        list-style: none;
+        margin:$spacing-unit/4 0;
+        padding:0;
+
+        li {
+            font-size: $xsmall-font-size;
+            text-transform: uppercase;
+            color: $grey;
+            letter-spacing: 1px;
+        }
+    }
+
+    .item-footer {
+        display: flex;
+        align-items: center;
+
+        label {
+            margin:0;
+        }
+
+        .button {
+            margin-left: auto;
+        }
+    }
+
+}
+
+
+
+
 
 .tab--ce {
     &.active {
@@ -746,5 +899,62 @@ a.tools__links {
     }
 }
 
+/* Equipment finder search results page*/
+
+section.search-results {
+
+    margin: $spacing-unit*2 0;
+
+    .products {
+        display: flex;
+        flex-wrap: wrap;
+
+        .product-card {
+            flex: 1 20%;
+            box-sizing: border-box;
+            margin: $spacing-unit/4;
+        }
+    }
+}
+
+.type-ag {
+    .products .product-card {
+        border-bottom-color: $red-light;
+
+        .item-price {
+            color: $red-light;
+        }
+    }
+}
+
+.search-tools {
+    background-color: $grey-light;
+
+    label {
+        white-space: nowrap;
+        margin: 0 $spacing-unit/2 0 0;
+    }
+    
+    .top {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: $spacing-unit/2;
+
+        .sort,.view,.rpp {
+            display: flex;
+            align-items: center;
+        }
+
+    }
+
+    .bottom {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: $spacing-unit/2;
+    }
+
+}
 
 

@@ -38,15 +38,6 @@ input[type="image"] {
     vertical-align: bottom;
 }
 
-.form-controls {
-    text-align: right;
-    margin-top: 1em;
-
-    .button {
-        margin-left: $spacing-unit;
-    }
-}
-
 .multi-inputs {
     display: flex;
     align-items: center;
@@ -61,5 +52,44 @@ input[type="image"] {
     strong {
         flex-shrink: 1;
         padding: 0 .5rem;
+    }
+}
+
+.form-controls {
+    text-align: right;
+    margin: 1em 0;
+
+    .button {
+        margin-left: $spacing-unit;
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+}
+
+.form-footer {
+
+    display: flex;
+    flex-wrap:wrap;
+    margin-top: $spacing-unit;
+    align-items: center;
+
+    .form-controls {
+        margin-left: auto;
+        // flex:1 250px;
+    }
+}
+
+.checkbox-modifier {
+    border: solid 1px $grey-light-d;
+
+    label {
+        margin:0;
+        padding: $spacing-unit/4 $spacing-unit/2;
+        line-height: 1.5;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 }
