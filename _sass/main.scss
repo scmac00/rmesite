@@ -19,6 +19,7 @@ $red-light: #b10f21;
 $black: #111;
 $grey-dark:#3E3E3E;
 $grey: #59585B;
+$grey-l: lighten($grey,15%);
 $grey-light: #F0F0F0;
 $grey-light-d: darken($grey-light,15%);
 
@@ -29,7 +30,7 @@ $text-color:       $grey-dark;
 $background-color: #fff;
 
 // Width of the content area
-$content-width:    1200px;
+$content-width:    1300px;
 
 $on-palm:          600px;
 $on-laptop:        800px;
@@ -57,6 +58,7 @@ $global-transition: all 0.2s;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
+		"normalize",
         "base",
         "forms",
         "components",

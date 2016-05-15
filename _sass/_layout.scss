@@ -649,6 +649,8 @@ a.tools__links {
             text-align: center;
             padding: $spacing-unit/2;
             background-color: $grey-light-d;
+            box-sizing: border-box;
+            border: solid 3px $grey-light;
 
 
 
@@ -656,6 +658,7 @@ a.tools__links {
                 position: relative;
                 margin: $spacing-unit 0;
                 padding: $spacing-unit 0;
+                font-size: $small-font-size;
 
                 &:before, &:after {
                     content: '';
@@ -711,6 +714,37 @@ a.tools__links {
     }
 }
 
+.tab--ce {
+    &.active {
+        &:after {
+            background-color: $orange!important;
+        }    
+    }
+}
+
+.tab-content--ce {
+    .form-controls {
+        
+        .button {
+            background-color: $orange;
+
+            &:hover {
+                background-color: $orange-dark;
+            }
+        }
+
+        .button--text {
+            color: $orange;
+            background-color: transparent;
+
+            &:hover {
+                color: $orange-dark;
+                background-color: transparent;
+            }
+        }
+
+    }
+}
 
 
 

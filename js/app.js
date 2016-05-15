@@ -20,8 +20,7 @@ $(document).ready(function(){
 			tab.removeClass('active');
 			$this.addClass('active');
 
-			tabContent.fadeOut();
-			tabContent.eq(tabNum).fadeIn();
+			tabContent.hide().eq(tabNum).fadeIn();
 		}
 
 
